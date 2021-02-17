@@ -1391,7 +1391,7 @@ int32 CFE_TBL_GetInfo( CFE_TBL_Info_t *TblInfoPtr, const char *TblName )
     RegIndx = CFE_TBL_FindTableInRegistry(TblName);
 
     /* If we found the table, then extract the information from the Registry */
-    if (RegIndx != CFE_TBL_NOT_FOUND)
+    if (RegIndx == CFE_TBL_NOT_FOUND)
     {
         /* Get pointer to Registry Record Entry to speed up processing */
         RegRecPtr = &CFE_TBL_Global.Registry[RegIndx];
